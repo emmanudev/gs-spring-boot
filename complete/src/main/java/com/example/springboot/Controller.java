@@ -4,11 +4,20 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-public class HelloController {
-
+public class Controller {
+	
 	@RequestMapping("/")
 	public String index() {
-		return "Greetings from Spring Boot!";
+		return "Ruinning!";
 	}
+	
+	@RequestMapping("/json")
+	public String json() {
+		String respuesta = "{"
+				+ "name:Emmanuel"
+				+ "job:Developer}";
+		return respuesta;
+	}
+	
 
 }
